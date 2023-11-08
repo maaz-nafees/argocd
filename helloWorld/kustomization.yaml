@@ -6,7 +6,7 @@ resources:
   
   patchesJson6902:
   - target:
-        version: v1
+      version: v1
       kind: Deployment
       name: testargo
     patch: |-
