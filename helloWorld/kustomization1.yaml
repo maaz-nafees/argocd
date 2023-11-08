@@ -3,4 +3,7 @@ kind: Kustomization
 
 resources:
   - ./bin
+  metadata:
+name: webstore-demo
+  **namespace: argocd**
   
