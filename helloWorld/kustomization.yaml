@@ -1,7 +1,15 @@
 apiVersion: akustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-
 resources:
   - ./bin
 
+patchesJson6902:
+  - target:
+      version: v1
+      kind: Deployment
+      name: testargo
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers
+        value: us-west-2
